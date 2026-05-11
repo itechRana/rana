@@ -1,0 +1,99 @@
+.hero-banner {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal), var(--primary-lime), var(--primary-pink));
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+  border-radius: 20px;
+  padding: 3rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.explore-btn {
+  background-color: var(--white);
+  color: var(--primary-blue);
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-visual {
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 400px;
+  height: 400px;
+  opacity: 0.2;
+}
+
+.blob {
+  position: absolute;
+  background: var(--white);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  top: 0;
+  right: 0;
+}
+
+.blob-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+  .hero-visual {
+    display: none;
+  }
+}
